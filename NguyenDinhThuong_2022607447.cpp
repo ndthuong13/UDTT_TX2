@@ -118,3 +118,90 @@ int main() {
 
     return 0;
 }
+
+
+
+
+//
+//
+//
+//#include<iostream>
+//
+//using namespace std;
+//
+//void sxtd(double *a, int n) {
+//	for(int i = 0; i < n; i++) {
+//		for(int j = i + 1; j < n; j++) {
+//			if(a[i] > a[j]) {
+//				int temp = a[i];
+//				a[i] = a[j];
+//				a[j] = temp;
+//			}
+//		}
+//	}
+//}
+//
+//int chiaDeTri(double *a, int n, int left, int right, double x) {
+//	if(left > right) return -1;
+//
+//	int mid = (left + right) / 2;
+//
+//	if(a[mid] == x)
+//		return mid;
+//	else if(a[mid] > x)
+//		return chiaDeTri(a, n, left, mid - 1, x);
+//	else
+//		return chiaDeTri(a, n, mid + 1, right, x);
+//}
+//
+//int main() {
+//	int n;
+//	double g, s;
+//	do {
+//		cout << "\nNhap gia tri n: ";
+//		cin >> n;
+//	} while(n < 12);
+//
+//	do {
+//		cout << "\nNhap gia tri g: ";
+//		cin >> g;
+//		cout << "\nNhap gia tri s: ";
+//		cin >> s;
+//
+//	} while(g == s);
+//
+//	double *a = new double[n];
+//
+//	for(int i = 0; i < n; i++) {
+//		cout << "\nNhap vao phan tu thu " << i + 1 << ": ";
+//		cin >> a[i];
+//	}
+//	sxtd(a, n);
+//	cout << "\nMang a sau khi sap xep la: ";
+//	for(int i = 0; i < n; i++) {
+//		cout << a[i] << " ";
+//	}
+//
+//	int vitriG = chiaDeTri(a, n, 0, n - 1, g);
+//	int vitriS = chiaDeTri(a, n, 0, n - 1, s);
+//
+//	if(vitriG != -1) {
+//		cout << "\nSo g = " << g << " xuat hien tai vi tri " << vitriG << endl;
+//	} else {
+//		cout << "\nSo g khong xuat hien trong mang a!";
+//	}
+//
+//	if(vitriS != -1) {
+//		cout << "\nSo s = " << s << " xuat hien tai vi tri " << vitriS << endl;
+//	} else {
+//		cout << "\nSo s khong xuat hien trong mang a!";
+//	}
+//
+//	if(vitriS != -1 && vitriG != -1) {
+//		if(vitriG > vitriS) {
+//			cout << "\ng dung sau s trong mang a!";
+//		} else {
+//			cout << "\ng dung truoc vi tr s trong mang a!";
+//		}
+//	}
+//}
